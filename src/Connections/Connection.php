@@ -14,7 +14,7 @@ use Src\Database\TransactionManager;
 use Src\Database\ConnectionInterface;
 use Src\Database\Query\Grammars\Grammar;
 use Src\Database\Query\Processors\Processor;
-use Src\Core\Contexts\DBContext;
+use Src\Database\DBContext;
 
 class Connection implements ConnectionInterface
 {
