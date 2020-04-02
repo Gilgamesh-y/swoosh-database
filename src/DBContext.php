@@ -14,6 +14,8 @@ class DBContext extends Context
 
     public static function __callStatic($method, $arguments)
     {
-        return App::get('context_db')->$method(...$arguments);
+        if ($context_mysql = App::get('context_db')) {
+            return $context_mysql->$method(...$arguments);
+        }
     }
 }
